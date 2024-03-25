@@ -22,13 +22,10 @@ public class DoubleLoginTest {
         driver.get(ConfProperties.getProperty("loginPage"));
     }
 
-
-
-
     @DataProvider(name = "validLogPass")
     public Object [][] validLogPass() {
         return new Object[][] {
-                {"kulik9997854@mail.ru", "sout7685jdk"},
+                {ConfProperties.getProperty("login"), ConfProperties.getProperty("password")},
                 {"kulik9998754@mail.ru", "434322"}
         };
     }

@@ -4,6 +4,7 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +17,7 @@ public class LoginTest {
     public static WebDriver driver;
 
 
-    @BeforeClass
+    @BeforeMethod
     public static void setup() {
         //определение пути до драйвера и его настройка
         System.setProperty("webdriver.chrome.driver", ConfProperties.getProperty("chromeDriver"));
